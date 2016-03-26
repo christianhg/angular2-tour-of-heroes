@@ -46,5 +46,5 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 ])
 
 export class AppComponent {
-  title: string = 'Tour of Heroes';
+  public title: string = 'Tour of Heroes';
 }

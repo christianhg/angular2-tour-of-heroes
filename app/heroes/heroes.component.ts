@@ -13,27 +13,27 @@ import {HeroService} from '../hero/hero.service';
 })
 
 export class HeroesComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
+  private heroes: Hero[];
+  private selectedHero: Hero;
 
   constructor(
     private heroService: HeroService,
     private router: Router) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.getHeroes();
   }
 
-  getHeroes() {
+  public getHeroes() {
     this.heroService.getHeroes()
       .then(heroes => this.heroes = heroes);
   }
 
-  gotoDetail() {
+  public gotoDetail() {
     this.router.navigate(['HeroDetail', { id: this.selectedHero.id }]);
   }
 
-  onSelect(hero: Hero) {
+  public onSelect(hero: Hero) {
     this.selectedHero = hero;
   }
 }
