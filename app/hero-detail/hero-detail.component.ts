@@ -16,10 +16,7 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(
     private heroService: HeroService,
-    private routeParams: RouteParams
-  ) {
-
-  }
+    private routeParams: RouteParams) { }
 
   ngOnInit() {
     let id = +this.routeParams.get('id');
