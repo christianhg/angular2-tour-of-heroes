@@ -18,13 +18,13 @@ export class HeroDetailComponent implements OnInit {
     private heroService: HeroService,
     private routeParams: RouteParams) { }
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     let id = +this.routeParams.get('id');
     this.heroService.getHero(id)
       .then(hero => this.hero = hero);
   }
 
-  public goBack() {
+  public goBack(): void {
     window.history.back();
   }
 }
